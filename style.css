@@ -20,28 +20,138 @@ a, a:hover, a:visited, a:active, a:focus {
 
 body {
     margin: 0;
+    padding: 0;
     /* border: 4px solid purple; */
+}
 
+#window {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    /* border: 2px solid blue; */
+    overflow: hidden;
+    z-index: -19;
+}
+
+#background {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background-color: #ededed;
+    z-index: -20;
+}
+
+#body-container {
+    margin: 0 0 0 74px;
+    width: calc(100vw - 91px);
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* border: 1px solid purple; */
 }
 
 nav {
     position: fixed;
     top: 0px;
     left: 0px;
-    width: 100%;
-    height: 60px;
-    background-color: white;
-    border-bottom: 1px solid rgb(220, 220, 220);
-    z-index: 1;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+    /* border: 1px solid blue; */
 }
+
+#external-link-icon {
+    display: inline-block;
+    /* box-shadow: 0px 3px 2px 1px #b1b1b1; */
+    /* border: 1px solid #d0d0d0; */
+    border-radius: 50px;
+    width: 52px;
+    height: 52px;
+    padding: 12px;
+    margin: 10px 6px 0px 10px;
+    cursor: pointer;
+    background-color: #d0d0d0;
+}
+
+#external-link-icon:hover + .link-hover-text {
+    display: inline-block;
+}
+
+#external-link-icon:hover .svg {
+    fill: #b1b1b1;
+}
+
+#external-link-icon:hover {
+    background-color: #b1b1b1;
+}
+
+#link-icon {
+    display: inline-block;
+    /* box-shadow: 0px 3px 2px 1px #b1b1b1; */
+    border: 1px solid #d0d0d0;
+    border-radius: 50px;
+    width: 52px;
+    height: 52px;
+    padding: 12px;
+    margin: 10px 6px 0px 10px;
+    cursor: pointer;
+    background-color: white;
+}
+
+#link-icon:hover {
+    border-color: #b1b1b1;
+}
+
+#link-icon:hover + .link-hover-text {
+    display: inline-block;
+}
+
+#link-icon:hover .svg {
+    fill: #b1b1b1;
+}
+
+.link-hover-text {
+    display: none;
+    /* box-shadow: 0px 3px 2px 1px #b1b1b1; */
+    /* border: 1px solid #b1b1b1; */
+    border-radius: 50px;
+    vertical-align: top;
+    height: 52px;
+    font-size: 16px;
+    padding: 18px;
+    margin-top: 10px;
+    background-color: #b1b1b1;
+    color: white;
+    letter-spacing: .2em;
+}
+
+#button-icon {
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    padding: 4px;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+}
+
+#button-text {
+    display: inline-block;
+    height: 38px;
+    vertical-align: top;
+    padding: 6px;
+    font-size: 22px;
+    letter-spacing: .2em;
+    /* border: 1px solid black; */
+    /* border-radius: 10px; */
+}
+
+#button {
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: white;
+    padding: 10px;
+    cursor: pointer;
+    min-width: 175px;
+}
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 .menu {
     min-width: 30px;
@@ -204,10 +314,10 @@ section {
     width: 80px;
     background-color: white;
     margin: 10px;
-    padding: 10px;
-    /* border-radius: 5px; */
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px dotted #d0d0d0;
     /* border: 1px solid rgb(220, 220, 220); */
-    box-shadow: 0px 3px 6px 1px rgb(220, 220, 220);
 
     display: flex;
     justify-content: center;
