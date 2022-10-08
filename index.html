@@ -55,7 +55,8 @@
         </a>
     </nav> -->
 
-    <div id="window"><div id="background"></div></div>
+    <canvas id="background"></canvas>
+    <!-- <div id="window"></div> -->
 
     <nav id="nav">
         <div id="link-container">
@@ -65,11 +66,11 @@
                 width="26px"
                 height="26px"
                 ><path class="svg"
-                    fill="#d0d0d0"
+                    fill="#b1b1b1"
                     d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"
                 /></svg>
             </div>
-            <div class="link-hover-text">HOME</div>
+            <div class="link-hover-text">Home</div>
         </div>
 
         <div id="link-container">
@@ -79,11 +80,11 @@
                 width="33px"
                 height="25px"
                 ><path class="svg"
-                    fill="#d0d0d0"
+                    fill="#b1b1b1"
                     d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0S96 57.3 96 128s57.3 128 128 128zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"
                 /></svg>
             </div>
-            <div class="link-hover-text">ABOUT</div>
+            <div class="link-hover-text">About</div>
         </div>
 
         <div id="link-container">
@@ -93,11 +94,11 @@
                 width="30px"
                 height="26px"
                 ><path class="svg"
-                    fill="#d0d0d0"
+                    fill="#b1b1b1"
                     d="M88.7 223.8L0 375.8V96C0 60.7 28.7 32 64 32H181.5c17 0 33.3 6.7 45.3 18.7l26.5 26.5c12 12 28.3 18.7 45.3 18.7H416c35.3 0 64 28.7 64 64v32H144c-22.8 0-43.8 12.1-55.3 31.8zm27.6 16.1C122.1 230 132.6 224 144 224H544c11.5 0 22 6.1 27.7 16.1s5.7 22.2-.1 32.1l-112 192C453.9 474 443.4 480 432 480H32c-11.5 0-22-6.1-27.7-16.1s-5.7-22.2 .1-32.1l112-192z"
                 /></svg>
             </div>
-            <div class="link-hover-text">PORTFOLIO</div>
+            <div class="link-hover-text">Portfolio</div>
         </div>
 
         <div id="link-container">
@@ -107,11 +108,11 @@
                 width="30px"
                 height="28px"
                 ><path class="svg"
-                    fill="#d0d0d0"
+                    fill="#b1b1b1"
                     d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
                 /></svg>
             </div>
-            <div class="link-hover-text">CONTACT ME</div>
+            <div class="link-hover-text">Contact Me</div>
         </div>
 
         <div id="link-container">
@@ -144,7 +145,7 @@
                 d="M116 3H12a8.91 8.91 0 00-9 8.8v104.42a8.91 8.91 0 009 8.78h104a8.93 8.93 0 009-8.81V11.77A8.93 8.93 0 00116 3z"
                 ></path>
                 <path class="svg"
-                fill="#d0d0d0"
+                fill="#b1b1b1"
                 d="M21.06 48.73h18.11V107H21.06zm9.06-29a10.5 10.5 0 11-10.5 10.49 10.5 10.5 0 0110.5-10.49M50.53 48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75v32H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53z"
                 /></svg>
             </div>
@@ -189,34 +190,42 @@
         <section id="home">
 
             <div class="home-text-wrapper">
-                <div class="home-title">ZANE COSMO GRAY</div>
-    
-                <div class="blurb">Front-End Web Developer</div>
-                
-                <a><div id="button"><div id="button-icon">
-                    <svg
-                    viewBox="0 0 512 512"
-                    width="32px"
-                    height="31px"
-                    ><path class="svg"
-                    fill="#d0d0d0"
-                    d="M256 512c141.4 0 256-114.6 256-256s-114.6-256-256-256C114.6 0 0 114.6 0 256S114.6 512 256 512zM129.2 265.9C131.7 259.9 137.5 256 144 256h64V160c0-17.67 14.33-32 32-32h32c17.67 0 32 14.33 32 32v96h64c6.469 0 12.31 3.891 14.78 9.875c2.484 5.984 1.109 12.86-3.469 17.44l-112 112c-6.248 6.248-16.38 6.248-22.62 0l-112-112C128.1 278.7 126.7 271.9 129.2 265.9z"
-                    /></svg>
+
+                <div class="main-title">
+                    <div class="home-title">ZANE COSMO GRAY</div>
+                    <div class="blurb">Front-End Web Developer</div>
                 </div>
-                <div id="button-text">resumé</div></div></a>
+                
+                <a>
+                    <div id="button">
+                        <div id="resumé-icon">
+                            <svg
+                            viewBox="0 0 512 512"
+                            width="32px"
+                            height="31px"
+                            ><path class="svg"
+                            fill="#b1b1b1"
+                            d="M256 512c141.4 0 256-114.6 256-256s-114.6-256-256-256C114.6 0 0 114.6 0 256S114.6 512 256 512zM129.2 265.9C131.7 259.9 137.5 256 144 256h64V160c0-17.67 14.33-32 32-32h32c17.67 0 32 14.33 32 32v96h64c6.469 0 12.31 3.891 14.78 9.875c2.484 5.984 1.109 12.86-3.469 17.44l-112 112c-6.248 6.248-16.38 6.248-22.62 0l-112-112C128.1 278.7 126.7 271.9 129.2 265.9z"
+                            /></svg>
+                        </div>
+                        <div class="button-text">resumé</div>
+                    </div>
+                </a>
     
-                <a class="portfolio-button" href="#portfolio-jump">
-                    <svg
-                        class="portfolio-icon"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 576 512">
-                        <path
-                            fill="var(--button-inverse-fill)"
-                            d="M147.8 192H480V144C480 117.5 458.5 96 432 96h-160l-64-64h-160C21.49 32 0 53.49 0 80v328.4l90.54-181.1C101.4 205.6 123.4 192 147.8 192zM543.1 224H147.8C135.7 224 124.6 230.8 119.2 241.7L0 480h447.1c12.12 0 23.2-6.852 28.62-17.69l96-192C583.2 249 567.7 224 543.1 224z">
-                        </path>
-                    </svg>
-    
-                    <span class="portfolio-text">portfolio</span>
+                <a>
+                    <div id="button">
+                        <div id="portfolio-icon">
+                            <svg
+                            viewBox="0 0 576 512"
+                            width="32px"
+                            height="31px"
+                            ><path class="svg"
+                            fill="#b1b1b1"
+                            d="M147.8 192H480V144C480 117.5 458.5 96 432 96h-160l-64-64h-160C21.49 32 0 53.49 0 80v328.4l90.54-181.1C101.4 205.6 123.4 192 147.8 192zM543.1 224H147.8C135.7 224 124.6 230.8 119.2 241.7L0 480h447.1c12.12 0 23.2-6.852 28.62-17.69l96-192C583.2 249 567.7 224 543.1 224z"
+                            /></svg>
+                        </div>
+                        <div class="button-text">portfolio</div>
+                    </div>
                 </a>
             </div>
         </section>
