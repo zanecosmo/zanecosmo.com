@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>zanecosmo</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" />
 </head>
 <body>
 
@@ -56,7 +57,6 @@
     </nav> -->
 
     <canvas id="background"></canvas>
-    <!-- <div id="window"></div> -->
 
     <nav id="nav">
         <div id="link-container">
@@ -66,7 +66,7 @@
                 width="26px"
                 height="26px"
                 ><path class="svg"
-                    fill="#b1b1b1"
+                    fill="#4b4b4b"
                     d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"
                 /></svg>
             </div>
@@ -80,7 +80,7 @@
                 width="33px"
                 height="25px"
                 ><path class="svg"
-                    fill="#b1b1b1"
+                    fill="#4b4b4b"
                     d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0S96 57.3 96 128s57.3 128 128 128zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"
                 /></svg>
             </div>
@@ -94,7 +94,7 @@
                 width="30px"
                 height="26px"
                 ><path class="svg"
-                    fill="#b1b1b1"
+                    fill="#4b4b4b"
                     d="M88.7 223.8L0 375.8V96C0 60.7 28.7 32 64 32H181.5c17 0 33.3 6.7 45.3 18.7l26.5 26.5c12 12 28.3 18.7 45.3 18.7H416c35.3 0 64 28.7 64 64v32H144c-22.8 0-43.8 12.1-55.3 31.8zm27.6 16.1C122.1 230 132.6 224 144 224H544c11.5 0 22 6.1 27.7 16.1s5.7 22.2-.1 32.1l-112 192C453.9 474 443.4 480 432 480H32c-11.5 0-22-6.1-27.7-16.1s-5.7-22.2 .1-32.1l112-192z"
                 /></svg>
             </div>
@@ -108,7 +108,7 @@
                 width="30px"
                 height="28px"
                 ><path class="svg"
-                    fill="#b1b1b1"
+                    fill="#4b4b4b"
                     d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
                 /></svg>
             </div>
@@ -145,7 +145,7 @@
                 d="M116 3H12a8.91 8.91 0 00-9 8.8v104.42a8.91 8.91 0 009 8.78h104a8.93 8.93 0 009-8.81V11.77A8.93 8.93 0 00116 3z"
                 ></path>
                 <path class="svg"
-                fill="#b1b1b1"
+                fill="#4b4b4b"
                 d="M21.06 48.73h18.11V107H21.06zm9.06-29a10.5 10.5 0 11-10.5 10.49 10.5 10.5 0 0110.5-10.49M50.53 48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75v32H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53z"
                 /></svg>
             </div>
@@ -153,80 +153,65 @@
         </div>
     </nav>
 
-    <div class="dropdown">
-        <a class="dropdown-home dropdown-button" href="#home-jump">home</a>
-        <a class="dropdown-contact dropdown-button" href="#contact">contact me</a>
-        <a class="dropdown-resume dropdown-button" href="zane-resume.pdf">resume</a>
-        <a class="dropdown-portfolio dropdown-button" href="#portfolio-jump">portfolio</a>
-        
-        <div class="dropdown-social-links-wrapper">
-            <a class="dropdown-github" href="https://github.com/zanecosmo">
+    <nav id="alt-nav">
+        <div id="link-container">
+            <div id="link-icon">
                 <svg
-                    class="social-svg"
-                    viewBox="0 0 128 128">
-                    <path
-                        fill="var(--text-color)"
-                        d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z">
-                    </path>
-                </svg>
-            </a>
-            
-            <a class="dropdown-linkedIn" href="https://www.linkedin.com/in/zane-cosmo-gray/">
-                <svg 
-                    class="social-svg"
-                    viewBox="0 0 128 128">
-                    <path
-                        fill="var(--text-color)"
-                        d="M116 3H12a8.91 8.91 0 00-9 8.8v104.42a8.91 8.91 0 009 8.78h104a8.93 8.93 0 009-8.81V11.77A8.93 8.93 0 00116 3zM39.17 107H21.06V48.73h18.11zm-9-66.21a10.5 10.5 0 1110.49-10.5 10.5 10.5 0 01-10.54 10.48zM107 107H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53V48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75z">
-                    </path>
-                </svg>
-            </a>
+                viewBox="0 0 448 512"
+                width="26"
+                height="26"
+                >
+                <path class="svg"
+                fill="#4b4b4b"
+                d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+                /></svg>
+            </div>
         </div>
-
-    </div>
+    </nav>
 
     <div id="home-jump"></div>
     <section id="body-container">
         <section id="home">
 
             <div class="home-text-wrapper">
-
                 <div class="main-title">
                     <div class="home-title">ZANE COSMO GRAY</div>
                     <div class="blurb">Front-End Web Developer</div>
-                </div>
-                
-                <a>
-                    <div id="button">
-                        <div id="resumé-icon">
-                            <svg
-                            viewBox="0 0 512 512"
-                            width="32px"
-                            height="31px"
-                            ><path class="svg"
-                            fill="#b1b1b1"
-                            d="M256 512c141.4 0 256-114.6 256-256s-114.6-256-256-256C114.6 0 0 114.6 0 256S114.6 512 256 512zM129.2 265.9C131.7 259.9 137.5 256 144 256h64V160c0-17.67 14.33-32 32-32h32c17.67 0 32 14.33 32 32v96h64c6.469 0 12.31 3.891 14.78 9.875c2.484 5.984 1.109 12.86-3.469 17.44l-112 112c-6.248 6.248-16.38 6.248-22.62 0l-112-112C128.1 278.7 126.7 271.9 129.2 265.9z"
-                            /></svg>
+
+                    <a>
+                        <div id="button">
+                            <div id="resumé-icon">
+                                <svg
+                                viewBox="0 0 512 512"
+                                width="32px"
+                                height="30px"
+                                ><path class="svg"
+                                fill="#4b4b4b"
+                                d="M256 512c141.4 0 256-114.6 256-256s-114.6-256-256-256C114.6 0 0 114.6 0 256S114.6 512 256 512zM129.2 265.9C131.7 259.9 137.5 256 144 256h64V160c0-17.67 14.33-32 32-32h32c17.67 0 32 14.33 32 32v96h64c6.469 0 12.31 3.891 14.78 9.875c2.484 5.984 1.109 12.86-3.469 17.44l-112 112c-6.248 6.248-16.38 6.248-22.62 0l-112-112C128.1 278.7 126.7 271.9 129.2 265.9z"
+                                /></svg>
+                            </div>
+                            <div class="button-text">Resumé</div>
                         </div>
-                        <div class="button-text">resumé</div>
-                    </div>
-                </a>
+                    </a>
     
-                <a>
-                    <div id="button">
-                        <div id="portfolio-icon">
-                            <svg
-                            viewBox="0 0 576 512"
-                            width="32px"
-                            height="31px"
-                            ><path class="svg"
-                            fill="#b1b1b1"
-                            d="M147.8 192H480V144C480 117.5 458.5 96 432 96h-160l-64-64h-160C21.49 32 0 53.49 0 80v328.4l90.54-181.1C101.4 205.6 123.4 192 147.8 192zM543.1 224H147.8C135.7 224 124.6 230.8 119.2 241.7L0 480h447.1c12.12 0 23.2-6.852 28.62-17.69l96-192C583.2 249 567.7 224 543.1 224z"
-                            /></svg>
+                    <a>
+                        <div id="button">
+                            <div id="portfolio-icon">
+                                <svg
+                                viewBox="0 0 576 512"
+                                width="32px"
+                                height="28px"
+                                ><path class="svg"
+                                fill="#4b4b4b"
+                                d="M147.8 192H480V144C480 117.5 458.5 96 432 96h-160l-64-64h-160C21.49 32 0 53.49 0 80v328.4l90.54-181.1C101.4 205.6 123.4 192 147.8 192zM543.1 224H147.8C135.7 224 124.6 230.8 119.2 241.7L0 480h447.1c12.12 0 23.2-6.852 28.62-17.69l96-192C583.2 249 567.7 224 543.1 224z"
+                                /></svg>
+                            </div>
+                            <div class="button-text">Portfolio</div>
                         </div>
-                        <div class="button-text">portfolio</div>
-                    </div>
-                </a>
+                    </a>
+                </div>
+                <img class="bio-pic" src="zanepic.jpg" />
+                <!-- <div class="random"></div> -->
             </div>
         </section>
     
@@ -268,23 +253,22 @@
             </div>
             
         </section>
+
+        <section id="about" class="section">
+            <div class="title">
+                <div class="title-icon">
+                    <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 448 512">
+                    <path
+                    fill="#4b4b4b"
+                    d="M224 256c70.7 0 128-57.31 128-128s-57.3-128-128-128C153.3 0 96 57.31 96 128S153.3 256 224 256zM274.7 304H173.3C77.61 304 0 381.6 0 477.3c0 19.14 15.52 34.67 34.66 34.67h378.7C432.5 512 448 496.5 448 477.3C448 381.6 370.4 304 274.7 304z"
+                    /></svg>
+                </div>
         
-        <div class="title">
-            <svg
-            class="about-title-icon"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 448 512">
-            <path
-                fill="var(--text-color)"
-                d="M224 256c70.7 0 128-57.31 128-128s-57.3-128-128-128C153.3 0 96 57.31 96 128S153.3 256 224 256zM274.7 304H173.3C77.61 304 0 381.6 0 477.3c0 19.14 15.52 34.67 34.66 34.67h378.7C432.5 512 448 496.5 448 477.3C448 381.6 370.4 304 274.7 304z">
-            </path>
-            </svg>
-    
-            <div class="title-text">ABOUT</div>
-        </div>
-    
-        <section id="about">
-            <!-- <img class="image" src="zane-crouched.jpg"></img> -->
+                <div class="title-text">About</div>
+            </div>
             
             <div class="about-blurb">
                 I enjoy problem solving, critical thinking, and I'm persistent--or perhaps stubborn--enough to enjoy practicing a skill over and over until I finally succeed.
@@ -296,125 +280,123 @@
     
         <div id="portfolio-jump"></div>
     
-        <div id="portfolio-title" class="title">
-            <svg
-                class="portfolio-title-icon"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 576 512">
-                <path
+        <section id="portolio" class="section">
+            <div class="title">
+                <div class="title-icon">
+                    <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 576 512">
+                    <path
                     fill="var(--text-color)"
-                    d="M147.8 192H480V144C480 117.5 458.5 96 432 96h-160l-64-64h-160C21.49 32 0 53.49 0 80v328.4l90.54-181.1C101.4 205.6 123.4 192 147.8 192zM543.1 224H147.8C135.7 224 124.6 230.8 119.2 241.7L0 480h447.1c12.12 0 23.2-6.852 28.62-17.69l96-192C583.2 249 567.7 224 543.1 224z">
-                </path>
-            </svg>
-    
-            <div class="title-text">PORTFOLIO</div>
-        </div>
+                    d="M147.8 192H480V144C480 117.5 458.5 96 432 96h-160l-64-64h-160C21.49 32 0 53.49 0 80v328.4l90.54-181.1C101.4 205.6 123.4 192 147.8 192zM543.1 224H147.8C135.7 224 124.6 230.8 119.2 241.7L0 480h447.1c12.12 0 23.2-6.852 28.62-17.69l96-192C583.2 249 567.7 224 543.1 224z"
+                    /></svg>
+                </div>
         
-        <section class="project-section">
-            
-    
-            <div class="image-container">
-                <img class="project-image" src="pipe-connect-screenshot.png"></img>
+                <div class="title-text">Portfolio</div>
             </div>
-            
-            <div class="project-text-wrapper">
-                
-                <div class="project-name">PIPE-CONNECT</div>
-                
-                <div class="project-blurb">
-                    A game whose object is to connect all the pipes from start to finish, using the pieces provided to you. The purpose of this project was to develop skill in Javascript, and to become comfortable solving problems using it. It was to that end that HTML5 Canvas was used, as all rendering and interactions must be done with Javascript.
-                    <br>
-                    <br>
-                    I learned a lot about building algorithms, the importance of code and file organization, debugging, workflow and time-management as it relates to software develpment, and much more. 
-                </div>
-    
-                <div class="link-wrapper">
-                    <a class="project-link" href="https://zanecosmo.com/pipe-game/">
+
+            <section class="project-section">
+                <div class="info-test">
+                    <div class="project-name">Pipe-Connect</div>
+
+                    <img class="image-vertical" src="pipe-connect-screenshot.png"></img>
                     
-                        <svg
-                            class="play-svg"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 384 512">
-                            <path
-                                fill="var(--button-inverse-fill)"
-                                d="M361 215C375.3 223.8 384 239.3 384 256C384 272.7 375.3 288.2 361 296.1L73.03 472.1C58.21 482 39.66 482.4 24.52 473.9C9.377 465.4 0 449.4 0 432V80C0 62.64 9.377 46.63 24.52 38.13C39.66 29.64 58.21 29.99 73.03 39.04L361 215z">
-                            </path>
-                        </svg>
-    
-                        <div class="button-text">play here</div>
-    
-                    </a>
-    
-                    <a class="repo-link" href="https://github.com/zanecosmo/pipe-game">
+                    <div class="project-description">Use your inventory of pipes to complete the connection, and watch out for obstacles!</div>
+                    <ul>
+                        <li>Javascript</li>
+                        <li>HTML 5 Canvas</li>
+                        <li>AWS S3 Buckets</li>
+                    </ul>
+
+                    <div class="link-wrapper">
+                        <a href="https://zanecosmo.com/pipe-game/">
+                            <div id="small-button">
+                                <div id="play-here-icon">
+                                    <svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 384 512">
+                                    <path class="svg"
+                                    fill="white"
+                                    d="M361 215C375.3 223.8 384 239.3 384 256C384 272.7 375.3 288.2 361 296.1L73.03 472.1C58.21 482 39.66 482.4 24.52 473.9C9.377 465.4 0 449.4 0 432V80C0 62.64 9.377 46.63 24.52 38.13C39.66 29.64 58.21 29.99 73.03 39.04L361 215z"
+                                    /></svg>
+                                </div>
+                                <div class="small-button-text">Play Here</div>
+                            </div>
+                        </a>
+
+                        <a class="repo-link" href="https://github.com/zanecosmo/pipe-game">
+                            <div id="small-button">
+                                <div id="link-to-github-icon">
+                                    <svg
+                                    width="20"
+                                    heght="20"
+                                    viewBox="0 0 128 128">
+                                    <path class="svg"
+                                    fill="white"
+                                    d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z"
+                                    /></svg>
+                                </div>
+                                <div class="small-button-text">Repository</div>
+                            </div>
+                        </a>
+                    </div>
                     
-                        <svg
-                            class="repo-svg"
-                            viewBox="0 0 128 128">
-                            <path
-                                fill="var(--button-inverse-fill)"
-                                d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z">
-                            </path>
-                        </svg>
-    
-                        <div class="button-text">repository</div>
-    
-                    </a>
                 </div>
-    
-            </div>
-    
-        </section>
-    
-        <section class="project-section">
-            
-            <div class="image-container">
-                <img class="project-image" src="multi-car-screenshot.png"></img>
-            </div>
-            
-            <div class="project-text-wrapper">
-                
-                <div class="project-name">MULTI-CAR</div>
-                
-                <div class="project-blurb">
-                    A game where up to four players struggle to cooperatively operate a single vehicle. The goal for this project as to build a basic single-page app, with a functional menu system and to experiment with we-sockts and back end-logic using Node.js.
-                    <br>
-                    <br>
-                    Here I learned the basics of HTML, CSS, Javascript logic, and Node.js servers. This was my first experience with any kind of networking communication, and it was an exercise in keeping data updated across multiple clients simultaneously. For the movement of the car I also experiemented with using simple calculation algorithms to adjust the position of elements on the screen.
+
+                <img class="image-horizontal" src="pipe-connect-screenshot.png"></img>
+            </section>
+
+            <section class="project-section">
+                <div class="info-test">
+                    <div class="project-name">Multi-Car</div>
+                    <div class="project-description">Play with your friends to cooperatively control a car. Don't lose control!</div>
+                    <ul>
+                        <li>Javascript</li>
+                        <li>Socket.io</li>
+                        <li>Node.js</li>
+                        <li>AWS EC2</li>
+                    </ul>
+
+                    <div class="link-wrapper">
+                        <a href="https://multi-car.herokuapp.com/">
+                            <div id="small-button">
+                                <div id="play-here-icon">
+                                    <svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 384 512">
+                                    <path class="svg"
+                                    fill="white"
+                                    d="M361 215C375.3 223.8 384 239.3 384 256C384 272.7 375.3 288.2 361 296.1L73.03 472.1C58.21 482 39.66 482.4 24.52 473.9C9.377 465.4 0 449.4 0 432V80C0 62.64 9.377 46.63 24.52 38.13C39.66 29.64 58.21 29.99 73.03 39.04L361 215z"
+                                    /></svg>
+                                </div>
+                                <div class="small-button-text">Play Here</div>
+                            </div>
+                        </a>
+
+                        <a class="repo-link" href="https://github.com/zanecosmo/NodeCarGame">
+                            <div id="small-button">
+                                <div id="link-to-github-icon">
+                                    <svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 128 128">
+                                    <path class="svg"
+                                    fill="white"
+                                    d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z"
+                                    /></svg>
+                                </div>
+                                <div class="small-button-text">Repository</div>
+                            </div>
+                        </a>
+                    </div>
+
                 </div>
-                
-                <div class="link-wrapper">
-                    <a class="project-link" href="https://multi-car.herokuapp.com/">
-                        <svg
-                        class="play-svg"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 384 512">
-                        <path
-                            fill="var(--button-inverse-fill)"
-                            d="M361 215C375.3 223.8 384 239.3 384 256C384 272.7 375.3 288.2 361 296.1L73.03 472.1C58.21 482 39.66 482.4 24.52 473.9C9.377 465.4 0 449.4 0 432V80C0 62.64 9.377 46.63 24.52 38.13C39.66 29.64 58.21 29.99 73.03 39.04L361 215z">
-                        </path>
-                        </svg>
-    
-                        <div class="button-text">play here</div>
-                    </a>
-    
-                    <a class="repo-link" href="https://github.com/zanecosmo/NodeCarGame">
-                        <svg
-                        class="repo-svg"
-                        viewBox="0 0 128 128">
-                        <path
-                            fill="var(--button-inverse-fill)"
-                            d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z">
-                        </path>
-                        </svg>
-    
-                        <div class="button-text">repository</div>
-                    </a>
-                </div>
-                
-            </div>
-    
-            
-    
+
+                <img class="image-horizontal" src="multi-car-screenshot.png"></img>
+            </section>
         </section>
         
         <section id="resume">
@@ -458,7 +440,7 @@
     </div>
 
     <!-- <script src="menu.js"></script> -->
-    <script src="mouse-action.js"></script>
+    <!-- <script src="mouse-action.js"></script> -->
     <script src="contact.js"></script>
     
 </body>
