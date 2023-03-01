@@ -1,10 +1,10 @@
-const menu = document.querySelector("#link-icon");
+const menu = document.querySelector(".menu");
 
 console.log(menu.classList);
-// menu.classList.add("invisible");
-console.log(menu.classList);
 
-menu.addEventListener("click", (_e) => {
+menu.addEventListener("click", (e) => {
     console.log("button clicked");
     document.getElementsByTagName("body")[0].classList.add("scroll-disabled");
+    menu.classList.add("invisible");
+    console.log(menu.classList);
 });
