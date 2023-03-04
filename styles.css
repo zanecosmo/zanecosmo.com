@@ -1,11 +1,20 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
   font-family: "Montserrat";
   letter-spacing: .2em;
 }
 
+a {
+  font-size: .9em;
+}
+
 a, a:hover, a:visited, a:active, a:focus {
   text-decoration: none;
+
 }
 
 :root {
@@ -19,6 +28,7 @@ a, a:hover, a:visited, a:active, a:focus {
   --background-blue: #0b1130;
   --background-red: #54101d;
   --translucent-background: rgb(255, 255, 255, .15);
+  --image-width: 460px;
 }
 
 body {
@@ -28,6 +38,12 @@ body {
   /* border: 4px solid purple; */
 }
 
+.invisible {
+  display: none;
+}
+
+/* Navigation */
+
 nav {
   z-index: 300;
   position: fixed;
@@ -36,7 +52,6 @@ nav {
   overflow: hidden;
   backdrop-filter: blur(5px);
   
-  /* background-color: rgb(255, 255, 255, .2); */
   background-color: var(--background-blue);
   border-bottom: 1px solid white;
 
@@ -53,14 +68,13 @@ nav {
   align-items: center;
 }
 
-.nav-buttons button {
+.nav-buttons a {
   background-color: transparent;
   border: none;
-  /* border-radius: 3px; */
+  font-size: .9em;
   color: white;
   cursor: pointer;
-  /* font-weight: bold; */
-  margin-left: 12px;
+  margin-left: 24px;
   padding: 8px 8px 8px 10px;
 }
 
@@ -68,19 +82,23 @@ nav .button-wrapper {
   align-self: flex-end;
 }
 
-.nav-buttons button:hover {
+.nav-buttons a:hover {
   padding-bottom: 7px;
   border-bottom: 1px solid white;
 }
 
+/* Planet */
+
 .planet h1 {
   font-size: 2.5em;
+  font-weight: normal;
 }
 
 .planet h2 {
   font-size: 1.4em;
   letter-spacing: .6em;
-  font-weight: normal;}
+  font-weight: normal;
+}
 
 .planet hr {
   height: 0px;
@@ -138,7 +156,7 @@ nav .button-wrapper {
 
 /* About Button */
 
-section {
+.about {
   min-height: 0px;
   width: 100%;
   margin-bottom: 4px;
@@ -191,7 +209,6 @@ section {
   padding: 8px;
   display: flex;
   flex-flow: row nowrap;
-  /* background-color: white; */
 }
 
 .social-icon {
@@ -251,14 +268,6 @@ section {
   transition: right .15s linear;
 }
 
-.planet button:hover {
-  /* color: #54101d; */
-}
-
-.planet button:hover .button-icon {
-  /* --icon-fill: #54101d; */
-}
-
 .animated-button:hover .button-back {
   right: -18px;
 }
@@ -266,7 +275,7 @@ section {
 .ground {
   position: relative;
   width: calc(100vw - 17px);
-  min-height: 1000px;
+  /* min-height: 3000px; */
   background-color: var(--background-blue);
 
   display: flex;
@@ -277,8 +286,9 @@ section {
 /* Portfolio Button Decor */
 
 .decor {
-  display: flex;
   margin-top: 40px;
+  margin-bottom: 120px;
+  display: flex;
   flex-flow: row nowrap;
   align-items: center;
 }
@@ -347,7 +357,7 @@ section {
 
 /* Circular Portfolio Button */
 
-.portfolio-arrow {
+.portfolio-button {
   letter-spacing: 2px;
 
   position: relative;
@@ -358,14 +368,13 @@ section {
   color: white;
   padding: 18px;
 
+  cursor: pointer;
   overflow: hidden;
 
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-
-  cursor: pointer;
 }
 
 .portfolio-border {
@@ -377,7 +386,7 @@ section {
   transition: transform .15s ease;
 }
 
-.portfolio-arrow .hover-div {
+.portfolio-button .hover-div {
   position: absolute;
   top: -140px;
   width: 140px;
@@ -418,4 +427,313 @@ section {
 
 .portfolio-button-container:hover .portfolio-border{
   transform: scale(1.1);
+}
+
+/* Projects Section */
+
+.project-section {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.project {
+  width: var(--window-width);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.slider-wrapper {
+  padding: 16px 0px 16px 0px;
+  margin-right: 22px;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slides-container {
+  width: var(--image-width);
+  height: auto;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-radius: 3px;
+  margin-top: 4px;
+
+  overflow: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+
+  display: flex;
+}
+
+/* WebKit */
+.slides-container::-webkit-scrollbar { 
+  width: 0;
+  height: 0;
+}
+
+.slide-arrow {
+  border: none;
+  background-color: transparent;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+
+.button-disabled {
+  --icon-fill: rgba(255, 255, 255, .4);
+  cursor: default;
+}
+
+.chevron {
+  height: auto;
+  width: 100%;
+}
+
+.slide {
+  height: 100%;
+}
+
+.image {
+  width: var(--image-width);
+  height: auto;
+}
+
+.project-info {
+  color: white;
+  max-width: 433px;
+  height: 100%;
+  /* border: 1px solid white; */
+}
+
+.project-info p {
+  letter-spacing: normal;
+  line-height: 2em;
+  
+
+  height: calc(100% - 138px);
+}
+
+.project-info a {
+  margin: 0;
+  width: fit-content;
+}
+
+.tools {
+  margin-bottom: 28px;
+  padding: 0;
+  list-style: none;
+  font-size: .8em;
+  font-weight: bold;
+
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.tools pre {
+  margin: 0;
+}
+
+.project-info h2 {
+  margin: 0;
+  letter-spacing: .2em;
+  font-weight: bold;
+}
+
+.image-wrapper {
+  padding: 16px 22px 16px 22px;
+  margin-right: 22px;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.demo-links {
+  display: flex;
+}
+
+.demo-links .animated-button {
+  margin-right: 8px;
+}
+
+/* Resume Section */
+
+.resume-decor {
+  margin: 80px 0px 80px 0px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contact Me Section */
+
+.contact-me {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-form {
+  width: 600px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.contact-form * {
+  font-size: 1em;
+  letter-spacing: normal;
+}
+
+.contact-form h2 {
+  border-bottom: 1px solid white;
+  letter-spacing: .2em;
+  padding: 0px 6px 6px 8px;
+}
+
+.name-and-email {
+  width: 100%;
+  padding-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.name-and-email input {
+  width: calc(50% - 4px);
+  margin: 0;
+}
+
+textarea {
+  width: 100%;
+  height: 200px;
+  resize: none;
+  margin-bottom: 18px;
+}
+
+.name-and-email input, textarea {
+  padding: 12px;
+  background-color: var(--translucent-background);
+  border-radius: 3px;
+  border: none;
+  color: white;
+}
+
+.name-and-email input:focus, textarea:focus {
+  outline: none;
+}
+
+.name-and-email input::placeholder, textarea::placeholder {
+  color: rgb(255, 255, 255, .6);
+}
+
+/* Affermation Screen */
+
+.affirmation-screen {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 500;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.affirmation-modal {
+  /* height: 60%; */
+  max-width: 600px;
+  position: fixed;
+
+  font-size: 20px;
+  padding: 20px;
+  color: white;
+  background-color: var(--background-blue);
+  box-shadow: 0px 3px 6px 1px rgba(0, 0, 0, 0.3);
+  opacity: 1;
+  z-index: 6000;
+  border-radius: 3px;
+  border: 1px solid white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.affirmation-modal p {
+  text-align: center;
+}
+
+.affirmation-modal span {
+  padding-left: 3px;
+}
+
+.accept-button {
+  display: inline-block;
+
+  background-color: var(--button-fill);
+  color: white;
+  padding: 10px 20px 10px 20px;
+  margin-top: 20px;
+  user-select: none;
+  cursor: pointer;
+
+  letter-spacing: .2em;
+}
+
+.accept-button:hover {
+  background-color: rgb(225, 70, 145);;
+}
+
+.visible {
+  display: flex;
+}
+
+.non-scrollable {
+  height: 100%;
+  overflow-y: hidden;
+}
+
+@media (max-width: 1100px) {
+  .project {
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slider-wrapper {
+    margin: 0;
+  }
+
+  .image-wrapper {
+    margin: 0;
+  }
+
+  .project-info {
+    margin-top: 24px;
+    max-width: 504px;
+    height: auto;
+  }
 }
