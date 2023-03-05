@@ -764,6 +764,15 @@ textarea {
     height: 1000px;
   }
 
+  .planet h2, .planet h1, hr {
+   max-width: 80vw;
+    text-align: center;
+  }
+
+  .planet h2 {
+    font-size: 14px;
+  }
+
   .about-section {
     max-width: 80vw;
   }
@@ -794,5 +803,33 @@ textarea {
 
   .image {
     max-width: 100%;
+  }
+
+  .contact-me {
+    width: 80%;
+  }
+
+  .contact-form {
+    
+  }
+
+  .name-and-email {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  #name-input, #email-input {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 520px) {
+  .planet {
+    padding-top: 60px;
+  }
+
+  .planet h1 {
+    font-size: 30px;
   }
 }
