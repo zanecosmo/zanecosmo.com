@@ -12,7 +12,8 @@
     <div class="nav-buttons">
       <a href="#top">Home</a>
       <a href="#project-section">Portfolio</a>
-      <a>About</a>
+      <!-- <a id="nav-about-button" href="#about-section">About</a> -->
+      <a id="nav-about-button">About</a>
       <a href="Resume-Feb-2023.pdf" target="_blank">Resumé</a>
     </div>
     <div class="button-wrapper">
@@ -63,7 +64,7 @@
       </a>
     </div>
 
-    <div class="about-button">
+    <div class="about-button" id="about-section">
       <div class="about-me-text">About Me</div>
       <div class="expand-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -30 448 512">
@@ -74,9 +75,11 @@
 
     <section class="about">
       <div class="about-section">
-        About me blah blah blah.
+        I am an early career software developer with an eye for aesthetics, an interest in helping people solving business problems, and a love for learning.
+        <br />
+        <br />
+        Some call it persistence, others call it stubbornness; whatever it is, I have it, and it's what drives me to keep improving every day.
       </div>
-
     </section>
 
     <div class="socials">
@@ -176,13 +179,13 @@
             </button>
             
   
-            <div class="window">
+            <!-- <div class="window"> -->
               <ul class="slides-container" id="slides-container">
                 <li class="slide"><img class="image" src="screenshots/inspection-reports/edit-template-screen.png" /></li>
                 <li class="slide"><img class="image" src="screenshots/inspection-reports/customer-info-screen.png" /></li>
                 <li class="slide"><img class="image" src="screenshots/inspection-reports/report-screen.png" /></li>
               </ul>
-            </div>
+            <!-- </div> -->
   
             <button class="slide-arrow" id="slide-arrow-next">
               <div class="chevron">
@@ -211,7 +214,7 @@
               <li>CSS</li>
             </ul>
   
-            <div>
+            <div class="demo-links">
               <div class="button-wrapper">
                 <a class="animated-button" href="https://github.com/zanecosmo/rv-report" target="_blank">
                   <div class="button-back"></div>
@@ -251,18 +254,6 @@
             <div class="demo-links">
   
               <div class="button-wrapper">
-                <a class="animated-button" href="https://zanecosmo.com/pipe-game/" target="_blank">
-                  <div class="button-back"></div>
-                  <div class="button-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-80 0 540 512">
-                      <path fill="var(--icon-fill)" d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" />
-                    </svg>
-                  </div>
-                  <span>Play Here</span>
-                </a>
-              </div>
-
-              <div class="button-wrapper">
                 <a class="animated-button" href="https://github.com/zanecosmo/pipe-game" target="_blank">
                   <div class="button-back"></div>
                   <div class="button-icon">
@@ -274,6 +265,18 @@
                     </svg>
                   </div>
                   <span>Source Code</span>
+                </a>
+              </div>
+
+              <div class="button-wrapper">
+                <a class="animated-button" href="https://zanecosmo.com/pipe-game/" target="_blank">
+                  <div class="button-back"></div>
+                  <div class="button-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-80 0 540 512">
+                      <path fill="var(--icon-fill)" d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" />
+                    </svg>
+                  </div>
+                  <span>Play Here</span>
                 </a>
               </div>
   

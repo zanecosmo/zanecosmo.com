@@ -1,5 +1,3 @@
-console.log("script-loaded")
-
 const sendButton = document.getElementById("submit-contact-form");
 const acceptButton = document.getElementById("accept-button");
 const affirmationScreen = document.querySelector(".affirmation-screen");

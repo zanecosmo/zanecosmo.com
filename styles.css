@@ -1,5 +1,7 @@
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+
 }
 
 * {
@@ -32,10 +34,11 @@ a, a:hover, a:visited, a:active, a:focus {
 }
 
 body {
+  position: relative;
+  height: 100vh;
   margin: 0;
   padding: 0;
-  /* background-color: #ededed; */
-  /* border: 4px solid purple; */
+  overflow-x: hidden;
 }
 
 .invisible {
@@ -139,26 +142,25 @@ nav .button-wrapper {
 }
 
 .planet-ring-inner {
-  width: 103%;
-  height: 103%;
+  width: calc(var(--circle-width) * 1.03);
+  height: calc(var(--circle-width) * 1.03);
   border-radius: 50%;
-  top: -1.5%;
-  left: -1.5%;
+  top: calc(var(--circle-width) * .015 * -1);
+  left: calc(var(--circle-width) * .015 * -1);
 }
 
 .planet-ring-outer {
-  width: 106%;
-  height: 106%;
+  width: calc(var(--circle-width) * 1.06);
+  height: calc(var(--circle-width) * 1.06);
   border-radius: 50%;
-  top: -3%;
-  left: -3%;
+  top: calc(var(--circle-width) * .03 * -1);
+  left: calc(var(--circle-width) * .03 * -1);
 }
 
 /* About Button */
 
 .about {
   min-height: 0px;
-  width: 100%;
   margin-bottom: 4px;
   transition: min-height .15s ease;
   overflow: hidden;
@@ -186,18 +188,21 @@ nav .button-wrapper {
 .about-section {
   font-size: 1em;
   letter-spacing: normal;
-  height: calc(100% - 8px);
   color: white;
   background-color: rgba(255, 255, 255, .1);
   border-radius: 30px;
   margin-top: 8px;
   padding: 18px;
+  padding-bottom: 22px;
+  
+  overflow: hidden;
+  transition: min-height .15s ease;
 }
 
-.deployed {
-  display: block;
-  min-height: 220px;
-}
+/* .deployed {
+  min-height: 1000px;
+  height: fit-content;
+} */
 
 .rotated {
   transform: rotate(180deg);
@@ -432,27 +437,32 @@ nav .button-wrapper {
 /* Projects Section */
 
 .project-section {
+  width: var(--window-width);
   display: flex;
   flex-flow: column nowrap;
+  align-items: center;
 }
 
 .project {
   width: var(--window-width);
+
+  overflow: hidden;
+  margin-bottom: 98px;
+
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  align-items: center;
-  margin-bottom: 80px;
+  /* align-items: center; */
 }
 
 .slider-wrapper {
-  padding: 16px 0px 16px 0px;
+  padding: 18px 0px 18px 0px;
   margin-right: 22px;
   position: relative;
   overflow: hidden;
   border-top: 1px solid white;
   border-bottom: 1px solid white;
-  height: 100%;
+  /* height: 100%; */
 
   display: flex;
   justify-content: center;
@@ -461,12 +471,12 @@ nav .button-wrapper {
 
 .slides-container {
   width: var(--image-width);
-  height: auto;
+  /* height: auto; */
   list-style: none;
   margin: 0;
   padding: 0;
   border-radius: 3px;
-  margin-top: 4px;
+  /* margin-top: 4px; */
 
   overflow: scroll;
   scroll-behavior: smooth;
@@ -485,7 +495,7 @@ nav .button-wrapper {
 .slide-arrow {
   border: none;
   background-color: transparent;
-  width: 22px;
+  min-width: 22px;
   height: 22px;
   cursor: pointer;
 }
@@ -501,27 +511,33 @@ nav .button-wrapper {
 }
 
 .slide {
-  height: 100%;
+  /* width: var(--image-width); */
+  /* height: 1%; */
 }
 
 .image {
+  display: block;
   width: var(--image-width);
-  height: auto;
+  /* height: auto; */
 }
 
 .project-info {
   color: white;
   max-width: 433px;
   height: 100%;
+
   /* border: 1px solid white; */
+
+  display: flex;
+  flex-flow: column nowrap;
 }
 
 .project-info p {
   letter-spacing: normal;
   line-height: 2em;
-  
 
-  height: calc(100% - 138px);
+  
+  /* height: calc(100% - 10px); */
 }
 
 .project-info a {
@@ -530,7 +546,7 @@ nav .button-wrapper {
 }
 
 .tools {
-  margin-bottom: 28px;
+  margin-bottom: 20px;
   padding: 0;
   list-style: none;
   font-size: .8em;
@@ -566,6 +582,11 @@ nav .button-wrapper {
 
 .demo-links {
   display: flex;
+  flex-wrap: wrap;
+}
+
+.demo-links .button-wrapper {
+  margin-top: 8px;
 }
 
 .demo-links .animated-button {
@@ -735,5 +756,43 @@ textarea {
     margin-top: 24px;
     max-width: 504px;
     height: auto;
+  }
+}
+
+@media (max-width: 700px) {
+  .planet {
+    height: 1000px;
+  }
+
+  .about-section {
+    max-width: 80vw;
+  }
+
+  .project {
+    max-width: 80%;
+  }
+
+  .slider-wrapper {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .window {
+    overflow: hidden;
+    height: auto;
+  }
+  
+  .slides-container {
+    max-width: calc(100% - 44px);
+    max-width: 100%;
+    height: auto;
+  }
+
+  .slide {
+    min-width: 100%;
+  }
+
+  .image {
+    max-width: 100%;
   }
 }
