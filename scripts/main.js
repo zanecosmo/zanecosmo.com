@@ -5,6 +5,7 @@ const aboutSection = document.querySelector(".about-section");
 const expandIcon = document.querySelector(".expand-icon");
 const navAboutButton = document.getElementById("nav-about-button");
 const aboutButton = document.querySelector(".about-button");
+const container = document.querySelector(".container");
 
 let isAboutMeDeployed = false;
 
@@ -37,13 +38,13 @@ const getOffset = (element) => {
   console.log(window.scrollY, rect.top);
 
   return {
-    top: window.scrollY + rect.top,
-    left: window.scrollX + rect.left
+    top: container.scrollTop + rect.top,
+    left: container.scrollLeft + rect.left
   };
 };
 
 navAboutButton.addEventListener("click", (e) => {
-  document.body.scrollTo(0, getOffset(aboutButton).top - 50);
+  container.scrollTo(0, getOffset(aboutButton).top - 50);
   !isAboutMeDeployed && expandAboutSection();
 });
 
@@ -54,7 +55,7 @@ const portfolioButton = document.querySelector(".portfolio-button");
 const projectSection = document.querySelector(".project-section");
 
 const scrollToPortfolioSection = (_e) => {
-  document.body.scrollTo(0, getOffset(projectSection).top - 50 - 30);
+  container.scrollTo(0, getOffset(projectSection).top - 50 - 30);
 };
 
 navPortfolioButton.addEventListener("click", scrollToPortfolioSection);

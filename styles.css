@@ -28,19 +28,23 @@ a, a:hover, a:visited, a:active, a:focus {
 }
 
 html {
-  scroll-behavior: smooth;
-  overflow-x: hidden;
+  /* scroll-behavior: smooth; */
+
 }
 
 body {
-  position: relative;
-  border: 1px solid purple;
-  scroll-behavior: smooth;
-  height: 100vh;
   margin: 0;
   padding: 0;
-  width: var(--window-width);
+}
+
+.container {
+  position: relative;
+  scroll-behavior: smooth;
+  /* max-width: 100%; */
+  /* width: var(--window-width); */
+  height: 100vh;
   overflow-x: hidden;
+  z-index: 301;
 }
 
 .invisible {
