@@ -61,12 +61,12 @@ const sendToServer = async () => {
         body: JSON.stringify(message)
     };
 
-    // const serverURL = "https://email.zanecosmo.com/send-email";
-    const testServer = "http://127.0.0.1:4000/send-email"
+    const serverURL = "https://email.zanecosmo.com/send-email";
+    // const testServer = "http://127.0.0.1:4000/send-email"
 
     try {
         console.log("HERE")
-        await fetch(testServer, jsonMessage);
+        await fetch(serverURL, jsonMessage);
         onSuccessResponse();
     }
 

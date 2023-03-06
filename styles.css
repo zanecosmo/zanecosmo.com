@@ -326,7 +326,6 @@ body.hasHover .animated-button:hover .button-back {
 
 .lines-right {
   align-items: flex-start;
-
 }
 
 .line-with-dot, .line-with-dot-mid {
@@ -889,5 +888,13 @@ body.hasHover .accept-button:hover {
 
   .planet h1 {
     font-size: 30px;
+  }
+
+  .line-with-dot hr {
+    width: 12vw;
+  }
+
+  .line-with-dot-mid hr {
+    width: 18vw
   }
 }
