@@ -25,6 +25,7 @@ a, a:hover, a:visited, a:active, a:focus {
   --background-red: #54101d;
   --translucent-background: rgb(255, 255, 255, .15);
   --image-width: 460px;
+  --nav-menu-width: 220px;
 }
 
 html {
@@ -58,7 +59,7 @@ nav {
   position: fixed;
   width: var(--window-width);
   height: 50px;
-  overflow: hidden;
+  /* overflow: hidden; */
   backdrop-filter: blur(5px);
   
   background-color: var(--background-blue);
@@ -68,6 +69,14 @@ nav {
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
+}
+
+.nav-menu-button {
+  display: none;
+  margin-left: 15px;
+  height: 20px;
+  min-width: 20px;
+  cursor: pointer;
 }
 
 .nav-buttons {
@@ -85,6 +94,8 @@ nav {
   cursor: pointer;
   margin-left: 24px;
   padding: 8px 8px 8px 10px;
+
+  transition: margin-left .07s linear;
 }
 
 nav .button-wrapper {
@@ -766,6 +777,43 @@ body.hasHover .accept-button:hover {
 }
 
 @media (max-width: 700px) {
+  .nav-buttons {
+    padding-top: 8px;
+    background-color: var(--background-blue);
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    height: calc(100vh - 50px);
+    width: 0px;
+    overflow: hidden;
+
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    z-index: 301;
+
+    transition: width .15s ease;
+  }
+
+  .nav-menu-deployed {
+    border-right: 1px solid white;
+    width: var(--nav-menu-width);
+  }
+
+  .nav-buttons a {
+    margin: 0;
+  }
+
+  body.hasHover .nav-buttons a:hover {
+    margin-left: 4px;
+    border-left: 1px solid white;
+    border-bottom: none;
+    padding-bottom: 8px;
+  }
+
+  .nav-menu-button {
+    display: block;
+  }
+
   .planet {
     height: 1000px;
   }
@@ -815,10 +863,6 @@ body.hasHover .accept-button:hover {
     width: 80%;
   }
 
-  .contact-form {
-    
-  }
-
   .name-and-email {
     flex-direction: column;
     padding: 0;
@@ -831,6 +875,14 @@ body.hasHover .accept-button:hover {
 }
 
 @media (max-width: 520px) {
+  :root {
+    --nav-menu-width: var(--window-width);
+  }
+
+  .nav-buttons {
+    border-right: none;
+  }
+  
   .planet {
     padding-top: 60px;
   }

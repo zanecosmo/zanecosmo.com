@@ -1,3 +1,38 @@
+// Nav Menu Logic
+
+const navMenuButton = document.querySelector(".nav-menu-button");
+const navMenu = document.querySelector(".nav-buttons");
+
+let menuIsDeployed = false;
+
+const retractNavMenu = (_e) => {
+  navMenu.classList.remove("nav-menu-deployed");
+  menuIsDeployed = false;
+};
+
+const deployNavMenu = (_e) => {
+  console.log(menuIsDeployed);
+  navMenu.classList.add("nav-menu-deployed");
+  menuIsDeployed = true;
+};
+
+navMenuButton.addEventListener("click", (_e) => {
+  menuIsDeployed ? retractNavMenu() : deployNavMenu();
+});
+
+document.querySelector("#nav-home-button").addEventListener("click", (_e) => {
+  console.log("something")
+  menuIsDeployed && retractNavMenu();
+});
+
+document.querySelector("#nav-resume-button").addEventListener("click", (_e) => {
+  menuIsDeployed && retractNavMenu();
+});
+
+document.querySelector(".planet").addEventListener("click", (_e) => {
+  menuIsDeployed && retractNavMenu();
+});
+
 // About Me Logic
 
 const aboutSectionWrapper = document.querySelector(".about");
@@ -10,10 +45,10 @@ const container = document.querySelector(".container");
 let isAboutMeDeployed = false;
 
 window.addEventListener("resize", (_e) => {
+  menuIsDeployed && retractNavMenu();
   if (isAboutMeDeployed) {
-    console.log(aboutSection.clientHeight)
     aboutSectionWrapper.style.cssText = `min-height: ${aboutSection.clientHeight + 8}px`;
-  }
+  };
 })
 
 const expandAboutSection = (_e) => {
@@ -45,16 +80,18 @@ const getOffset = (element) => {
 
 navAboutButton.addEventListener("click", (e) => {
   container.scrollTo(0, getOffset(aboutButton).top - 50);
+  menuIsDeployed && retractNavMenu();
   !isAboutMeDeployed && expandAboutSection();
 });
 
-// Profolio BUtton Logic
+// Portfolio BUtton Logic
 
 const navPortfolioButton = document.getElementById("nav-portfolio-button");
 const portfolioButton = document.querySelector(".portfolio-button");
 const projectSection = document.querySelector(".project-section");
 
 const scrollToPortfolioSection = (_e) => {
+  menuIsDeployed && retractNavMenu();
   container.scrollTo(0, getOffset(projectSection).top - 50 - 30);
 };
 
@@ -73,6 +110,7 @@ prevButton.disabled = true;
 prevButton.classList.add("button-disabled");
 
 window.addEventListener("resize", (_e) => {
+  menuIsDeployed && retractNavMenu();
   slidesContainer.scrollLeft = slide.clientWidth * (image - 1);
 })
 
