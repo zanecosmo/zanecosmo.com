@@ -775,6 +775,13 @@ body.hasHover .accept-button:hover {
   }
 }
 
+/* Footer */
+
+footer > p {
+  margin-top: 18px;
+  color: #ffffff;
+}
+
 @media (max-width: 700px) {
   .nav-buttons {
     padding-top: 8px;
