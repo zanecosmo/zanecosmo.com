@@ -163,3 +163,9 @@ footer {
 footer p {
   font-weight: bold;
 }
+
+@media screen and (max-width: 900px) {
+  body {
+    justify-content: start;
+  }
+}
