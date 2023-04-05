@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat";
+  font-size: 12px;
+}
+
+body {
+  margin: 0px;
+  margin-top: 14px;
+  margin-bottom: 14px;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(234, 239, 243);
+}
+
+h1 {
+  font-size: 34px;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+h3 {
+  font-size: 14px;
+}
+
+.content {
+  width: 860px;
+  min-width: 860px;
+  padding: 32px;
+  background-color: rgb(255, 255, 255);
+}
+
+.software-developer {
+  font-weight: 100;
+}
+
+.info {
+  display: flex;
+  width: 400px;
+  justify-content: space-between;
+}
+
+header > div {
+  display: flex;
+}
+
+header h1 {
+  margin: 0px;
+  margin-right: 10px;
+}
+
+header p {
+  font-weight: bold;
+  margin: 0px;
+}
+
+header {
+  margin-bottom: 18px;
+}
+
+button {
+  margin-left: auto;
+  color: white;
+  border-radius: 4px;
+  padding: 8px;
+  /* height: 30px; */
+  border: none;
+  background-color: black;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+}
+
+button p {
+  margin: 0px;
+  margin-left: 8px;
+}
+
+.svg {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+}
+
+.job ul {
+  margin: 0px;
+  margin-bottom: 18px;
+}
+
+section > .techs > ul {
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+
+section {
+  display: flex;
+  flex-flow: row nowrap;
+  padding-bottom: 18px;
+  padding-top: 18px;
+  border-top: 1px solid black;
+}
+
+section h1 {
+  margin: 18px;
+  font-size: 1.2em;
+  min-width: 120px;
+}
+
+section h2 {
+  margin-top: 18px;
+  margin-bottom: 0px;
+}
+
+section > div {
+  border-left: 1px dashed black;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+section h2 {
+  display: inline-block;
+}
+
+section h3 {
+  font-style: italic;
+  font-weight: 100;
+}
+
+.job-title {
+  display: flex;
+}
+
+.date {
+  margin-left: auto;
+}
+
+.job-title .spacer {
+  margin-left: 6px;
+  margin-right: 6px;
+  height: 11px;
+  border-bottom: 1px dashed black;
+  flex-grow: 1;
+}
+
+.techs {
+  display: flex;
+}
+
+.techs > * {
+  margin-left: 0px;
+}
+
+footer {
+  border-top: 1px solid black;
+  padding-top: 18px;
+  display: flex;
+  justify-content: center;
+}
+
+footer p {
+  font-weight: bold;
+}
