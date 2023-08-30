@@ -1,13 +1,14 @@
-const sendButton = document.querySelector(".submit-button");
-const acceptButton = document.querySelector(".accept-button");
+const sendButton = document.getElementById("submit-contact-form");
+const acceptButton = document.getElementById("accept-button");
 const affirmationScreen = document.querySelector(".affirmation-screen");
+const body = document.querySelector("body");
 
 const senderIdentifier = "ZANE";
 
 const inputs = {
-    name:  document.querySelector(".name-input"),
-    email: document.querySelector(".email-input"),
-    message: document.querySelector(".message-input")
+    name:  document.getElementById("name-input"),
+    email: document.getElementById("email-input"),
+    message: document.getElementById("message-input")
 };
 
 
@@ -17,7 +18,7 @@ const hasNoCharacters = (string) => {
 };
 
 const extractFormText = () => {
-    const message = {identifier: senderIdentifier};
+    const message = { identifier: senderIdentifier };
 
     for (const input in inputs) {
         
@@ -37,14 +38,18 @@ const extractFormText = () => {
     return message;
 };
 
-const onSuccessResponse = () => affirmationScreen.classList.add("visible");
+const onSuccessResponse = () => {
+    affirmationScreen.classList.add("visible");
+    body.classList.add("non-scrollable");
+}
 
 const returnToPage = () => {
     for (const input in inputs) inputs[input].value = ""
     affirmationScreen.classList.remove("visible");
+    body.classList.remove("non-scrollable");
 };
 
-const sendToServer = () => {
+const sendToServer = async () => {
     const message = extractFormText();
 
     const jsonMessage = {
@@ -56,13 +61,19 @@ const sendToServer = () => {
         body: JSON.stringify(message)
     };
 
-    const serverURL = "https://zane-smtp-server.herokuapp.com/send-email";
+    const serverURL = "https://email.zanecosmo.com/send-email";
     // const testServer = "http://127.0.0.1:4000/send-email"
 
-    fetch(serverURL, jsonMessage)
-        .then(res => res.json())
-        .then(_res => onSuccessResponse())
-        .catch(error => console.log(error));
+    try {
+        console.log("HERE")
+        await fetch(serverURL, jsonMessage);
+        onSuccessResponse();
+    }
+
+    catch (e) {
+        console.log(e);
+    };
+
 };
 
 sendButton.addEventListener("click", sendToServer);
