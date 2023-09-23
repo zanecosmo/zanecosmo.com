@@ -3,14 +3,11 @@ const acceptButton = document.getElementById("accept-button");
 const affirmationScreen = document.querySelector(".affirmation-screen");
 const body = document.querySelector("body");
 
-const senderIdentifier = "ZANE";
-
 const inputs = {
     name:  document.getElementById("name-input"),
     email: document.getElementById("email-input"),
     message: document.getElementById("message-input")
 };
-
 
 const hasNoCharacters = (string) => {
     for (char of string) {if (char !== " ") return false};
@@ -18,18 +15,22 @@ const hasNoCharacters = (string) => {
 };
 
 const extractFormText = () => {
-    const message = { identifier: senderIdentifier };
+    const message = {
+        name: "",
+        email: "",
+        message: ""
+    };
 
     for (const input in inputs) {
         
         if (inputs[input].value.length === 0) {
             message[input] = "NO ENTRY";
-            break;
+            continue;
         };
 
         if (hasNoCharacters(inputs[input].value)) {
             message[input] = "NO ENTRY";
-            break;
+            continue;
         };
 
         message[input] = inputs[input].value;
@@ -52,6 +53,8 @@ const returnToPage = () => {
 const sendToServer = async () => {
     const message = extractFormText();
 
+    console.log(message);
+
     const jsonMessage = {
         method: "POST",
         headers: {
@@ -61,12 +64,11 @@ const sendToServer = async () => {
         body: JSON.stringify(message)
     };
 
-    const serverURL = "https://email.zanecosmo.com/send-email";
-    // const testServer = "http://127.0.0.1:4000/send-email"
+    const lambdaURL = "https://em2yxc7dxekgvlduzv7trg4g2a0jcolt.lambda-url.us-east-1.on.aws/";
 
     try {
         console.log("HERE")
-        await fetch(serverURL, jsonMessage);
+        await fetch(lambdaURL, jsonMessage);
         onSuccessResponse();
     }
 
