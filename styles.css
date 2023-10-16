@@ -115,8 +115,9 @@ body.hasHover .nav-buttons a:hover {
   position: relative;
   background-image: url("/images/mountain.jpg");
   background-size: contain;
-  width: 100vw;
-  height: 100vh;
+  /* width: var(--mountian-width); */
+  width: 120%;
+  height: 1500px;
   z-index: -100;
   filter: opacity(.25);
 }
