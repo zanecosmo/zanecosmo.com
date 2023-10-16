@@ -113,7 +113,7 @@ body.hasHover .nav-buttons a:hover {
 
 .mountain {
   position: relative;
-  background-image: url("/images/mountain.jpg");
+  background-image: url("/images/mountain-compressed.jpg");
   background-size: contain;
   /* width: var(--mountian-width); */
   width: 120%;
