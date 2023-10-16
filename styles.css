@@ -26,6 +26,8 @@ a, a:hover, a:visited, a:active, a:focus {
   --translucent-background: rgb(255, 255, 255, .15);
   --image-width: 460px;
   --nav-menu-width: 220px;
+  --mountian-width: 6000px;
+  --mountain-height: 3376px;
 }
 
 html {
@@ -105,6 +107,18 @@ nav .button-wrapper {
 body.hasHover .nav-buttons a:hover {
   padding-bottom: 7px;
   border-bottom: 1px solid white;
+}
+
+/* Mountain */
+
+.mountain {
+  position: relative;
+  background-image: url("/images/mountain.jpg");
+  background-size: contain;
+  width: 100vw;
+  height: 100vh;
+  z-index: -100;
+  filter: opacity(.25);
 }
 
 /* Planet */
